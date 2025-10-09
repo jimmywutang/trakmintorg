@@ -37,7 +37,9 @@ const FAQPage = () => {
                             <ul className="space-y-4 text-muted-foreground">
                                 <li className="flex items-center gap-3">
                                     <Phone className="h-5 w-5 text-primary" />
-                                    <span>+1 (800) 555-0199</span>
+                                    <a href="https://wa.me/19498393391" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                                      +1 (949) 839-3391
+                                    </a>
                                 </li>
                                 <li className="flex items-center gap-3">
                                     <Mail className="h-5 w-5 text-primary" />

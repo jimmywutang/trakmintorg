@@ -28,7 +28,7 @@ export default function RootLayout({
         <Toaster />
         <GoogleAnalytics gaId="G-X5Z4SVRHV3" />
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="0fRSxYXV2FAPynCMexr10w" async></script>
-        <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=IccX7SGq0Ppz"></script>      </body>
+        <script id="chatway" async="true" src="https://cdn.chatway.app/widget.js?id=OIPog7iDjVjc"></script>      </body>
     </html>
   );
 }

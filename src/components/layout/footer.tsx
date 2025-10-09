@@ -43,12 +43,14 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Mail size={16} className="text-muted-foreground" />
                 <a href="mailto:help@trakmint.org" className="text-sm text-muted-foreground hover:text-foreground">
-                  Help@trakmint.org
+                  help@trakmint.org
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={16} className="text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">+1 (928) 380-0840</span>
+                <a href="https://wa.me/19498393391" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground">
+                  +1 (949) 839-3391
+                </a>
               </li>
             </ul>
           </div>
