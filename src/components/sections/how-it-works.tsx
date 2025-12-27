@@ -1,83 +1,66 @@
 import { FileText, ClipboardCheck, Search, DollarSign } from "lucide-react"
-import { MotionDiv } from "@/components/motion-div";
+import { ScrollReveal } from '@/components/parallax-wrapper';
 
 const steps = [
     {
         icon: <FileText className="h-10 w-10 text-accent" />,
         title: "Submit Your Case",
-        description: "Fill out our confidential online form with the details of your situation. The more information you provide, the better we can assess your case."
+        description: "Initiate our secure intake process with a comprehensive overview of your situation. Confidentiality is our baseline."
     },
     {
         icon: <ClipboardCheck className="h-10 w-10 text-accent" />,
-        title: "Free Evaluation",
-        description: "Our experts will review your submission free of charge to determine the viability of your claim and outline a potential strategy."
+        title: "Forensic Evaluation",
+        description: "Our analysts perform advanced forensic tracing to determine the most effective recovery strategy at no initial cost."
     },
     {
         icon: <Search className="h-10 w-10 text-accent" />,
-        title: "Recovery in Action",
-        description: "Once you approve, our team gets to work. We use advanced techniques to trace, confront, and recover your lost assets."
+        title: "Strategic Execution",
+        description: "Our team deploys proprietary methodologies to track, confront, and secure your digital assets globally."
     },
     {
         icon: <DollarSign className="h-10 w-10 text-accent" />,
-        title: "Funds Returned",
-        description: "We fight to get your money back. Upon successful recovery, we ensure the funds are securely returned to you, minus our agreed-upon success fee."
+        title: "Asset Restoration",
+        description: "Finalized reclamation of funds followed by secure transfer to your verified destination with full reporting."
     }
 ]
 
 export function HowItWorks() {
     return (
-        <section 
-            id="how-it-works" 
-            className="py-20 md:py-28 bg-primary text-primary-foreground relative overflow-hidden"
+        <section
+            id="how-it-works"
+            className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden"
         >
-             <div 
-                className="absolute inset-0 z-0" 
+            <div
+                className="absolute inset-0 z-0 opacity-[0.03]"
                 style={{
                     backgroundImage: "url('/grid.svg')",
-                    backgroundRepeat: 'repeat',
-                    opacity: 0.05,
-                    transform: 'scale(1.5)',
+                    backgroundSize: "60px 60px"
                 }}>
             </div>
             <div className="container relative z-10">
-                <MotionDiv 
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-                        How It Works: Our 4-Step Process
+                <ScrollReveal className="text-center mb-20">
+                    <h2 className="text-3xl font-extrabold tracking-tightest sm:text-5xl font-headline mb-6">
+                        The <span className="text-accent">Protocol</span> for Recovery
                     </h2>
-                    <p className="mt-4 max-w-2xl mx-auto text-lg text-primary-foreground/80">
-                        We've streamlined the recovery process to be as clear and stress-free as possible. Here's how we help you get your money back.
+                    <p className="max-w-2xl mx-auto text-lg text-primary-foreground/70 leading-relaxed">
+                        Precision engineering meets legal expertise. Our four-stage methodology ensures transparency and maximal recovery potential.
                     </p>
-                </MotionDiv>
-                <div className="relative">
-                     <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-primary-foreground/20" style={{transform: 'translateY(-50%)'}}></div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {steps.map((step, index) => (
-                            <MotionDiv 
-                                key={index}
-                                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                                transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="text-center p-6 relative"
-                            >
-                                <MotionDiv 
-                                    className="relative bg-primary inline-block p-4 rounded-full border-2 border-accent mb-4 z-10"
-                                    whileHover={{ scale: 1.1, rotate: 10 }}
-                                    transition={{ type: "spring", stiffness: 300 }}
-                                >
-                                    {step.icon}
-                                </MotionDiv>
-                                <h3 className="font-bold text-xl mb-2">{step.title}</h3>
-                                <p className="text-primary-foreground/80">{step.description}</p>
-                            </MotionDiv>
-                        ))}
-                    </div>
+                </ScrollReveal>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+                    <div className="hidden lg:block absolute top-[45px] left-0 w-full h-px bg-white/10"></div>
+                    {steps.map((step, index) => (
+                        <ScrollReveal key={index} delay={index * 0.15} className="relative z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div className="mb-8 p-5 bg-primary border-2 border-accent/20 rounded-2xl shadow-xl transform transition-transform hover:scale-110 duration-500">
+                                {step.icon}
+                            </div>
+                            <h3 className="font-extrabold text-xl mb-4 text-white tracking-tight">{step.title}</h3>
+                            <p className="text-primary-foreground/60 leading-relaxed">{step.description}</p>
+                            <div className="mt-6 text-[10px] font-black uppercase tracking-[0.2em] text-accent/50">
+                                Phase 0{index + 1}
+                            </div>
+                        </ScrollReveal>
+                    ))}
                 </div>
             </div>
         </section>

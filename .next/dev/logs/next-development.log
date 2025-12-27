@@ -1,0 +1,117 @@
+[00:00:01.817] Server  LOG     ✓ Ready in 1277ms
+[00:00:12.850] Server  LOG     ○ Compiling / ...
+[00:00:17.167] Server  WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:00:17.169] Server  WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:00:18.998] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.578] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" has legacy prop "layout". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:00:19.578] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" has legacy prop "objectFit". Did you forget to run the codemod?
+Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
+[00:00:20.236] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:00:20.236] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:02:52.810] Server  LOG     ✓ Compiled in 570ms
+[00:03:24.771] Server  LOG     ✓ Compiled in 5ms
+[00:03:24.772] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:03:32.222] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:33.188] Browser WARN    Image with src "https://images.unsplash.com/photo-1559526324-c1f275fbfa32?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:03:55.958] Server  LOG     ✓ Compiled in 0ms
+[00:03:57.536] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:03:57.863] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:03:57.863] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:04:00.031] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:04:04.939] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:04:05.672] Browser WARN    Image with src "https://images.unsplash.com/photo-1559526324-c1f275fbfa32?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:05:06.144] Server  ERROR   ⨯ ReferenceError: Link is not defined
+[00:05:06.422] Browser ERROR   uncaughtError: ReferenceError: Link is not defined
+[00:05:13.562] Server  LOG     ✓ Compiled in 103ms
+[00:05:15.569] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:15.854] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:05:23.540] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:05:41.123] Server  LOG     ✓ Compiled in 2.3s
+[00:05:49.075] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:06:55.294] Server  LOG     ✓ Compiled in 0ms
+[00:06:58.953] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:07:00.529] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:07:00.529] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:07:13.502] Browser WARN    Unable to access iframe: {}
+[00:07:14.292] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:07:50.213] Browser WARN    Unable to access iframe: {}
+[00:08:29.487] Browser WARN    Unable to access iframe: {}
+[00:09:07.457] Browser WARN    Unable to access iframe: {}
+[00:09:42.284] Browser WARN    Unable to access iframe: {}
+[00:10:12.301] Browser WARN    Unable to access iframe: {}
+[00:10:53.117] Browser WARN    Unable to access iframe: {}
+[00:11:24.972] Browser WARN    Unable to access iframe: {}
+[00:12:08.319] Browser WARN    Unable to access iframe: {}
+[00:12:45.582] Browser WARN    Unable to access iframe: {}
+[00:13:26.665] Browser WARN    Unable to access iframe: {}
+[00:15:57.133] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:58.481] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:15:58.481] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:16:43.159] Browser WARN    Unable to access iframe: {}
+[00:17:25.273] Browser WARN    Unable to access iframe: {}
+[00:20:19.892] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:20:20.988] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:20:20.993] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:20:20.993] Browser WARN    Ignoring Event: localhost
+[00:20:21.172] Browser WARN    Unable to access iframe: {}
+[00:20:22.401] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:21:04.035] Browser WARN    Unable to access iframe: {}
+[00:22:14.171] Browser WARN    Unable to access iframe: {}
+[00:23:11.283] Browser WARN    Unable to access iframe: {}
+[00:24:14.544] Browser WARN    Unable to access iframe: {}
+[00:25:49.068] Browser WARN    Unable to access iframe: {}
+[00:26:37.248] Browser WARN    Unable to access iframe: {}
+[00:28:01.554] Browser WARN    Unable to access iframe: {}
+[00:31:30.779] Browser WARN    Ignoring Event: localhost
+[00:36:41.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:49.263] Browser WARN    Unable to access iframe: {}
+[00:37:46.374] Browser WARN    Unable to access iframe: {}
+[00:39:14.203] Browser WARN    Unable to access iframe: {}
+[00:40:05.235] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:05.235] Browser WARN    Ignoring Event: localhost
+[00:40:08.630] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:40:08.630] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:41:05.160] Browser WARN    Unable to access iframe: {}
+[00:42:10.336] Browser WARN    Unable to access iframe: {}
+[00:43:27.710] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:43:28.218] Browser WARN    Ignoring Event: localhost
+[00:43:29.430] Browser WARN    Unable to access iframe: {}
+[00:44:24.957] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:44:25.485] Browser WARN    Ignoring Event: localhost
+[00:44:26.649] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:44:26.649] Browser WARN    Image with src "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=1470&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:44:26.822] Browser WARN    Unable to access iframe: {}
+[01:06:02.015] Browser WARN    Unable to access iframe: {}
+[01:07:18.189] Browser WARN    Unable to access iframe: {}
+[01:07:18.311] Browser WARN    Image with src "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1420&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:08:20.823] Browser WARN    Unable to access iframe: {}
+[01:09:26.606] Browser WARN    Unable to access iframe: {}
+[01:10:10.655] Browser WARN    Unable to access iframe: {}
+[01:13:13.271] Browser WARN    Unable to access iframe: {}
+[01:13:52.267] Browser WARN    Unable to access iframe: {}
+[01:15:18.968] Browser WARN    Unable to access iframe: {}
+[01:21:07.214] Server  LOG     ✓ Compiled in 524ms
+[01:21:43.181] Server  LOG     ✓ Compiled in 383ms
+[01:22:14.015] Server  LOG     ✓ Compiled in 252ms
+[01:23:33.635] Server  LOG     ✓ Compiled in 381ms
+[01:23:35.715] Server  LOG     ✓ Compiled in 459ms
+[01:24:49.576] Server  LOG     ✓ Compiled in 807ms
+[01:24:51.682] Server  LOG     ✓ Compiled in 954ms
+[01:27:36.496] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:36.928] Browser WARN    Image with src "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1374&auto=format&fit=crop" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:27:37.096] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[01:28:15.011] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[01:28:43.659] Server  LOG     ✓ Finished filesystem cache database compaction in 20.3s
+[01:28:44.350] Server  LOG     ✓ Finished writing to filesystem cache in 14.9s
+[01:29:10.828] Server  LOG     ○ Compiling /risk-assessment ...
+[01:29:28.531] Server  LOG     ○ Compiling /about-us ...
+[01:29:32.578] Browser WARN    Image with src "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1374&auto=format&fit=crop" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

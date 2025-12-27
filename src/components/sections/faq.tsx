@@ -4,52 +4,50 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { MotionDiv } from "@/components/motion-div";
-
+import { ScrollReveal } from "@/components/parallax-wrapper";
 
 const faqs = [
   {
-    question: "How does the recovery process work?",
-    answer: "Our process begins with a free consultation and risk assessment. If we take on your case, our team of experts uses advanced tracing techniques, legal strategies, and communication with financial institutions to recover your funds. We keep you informed at every step."
+    question: "What is the standard duration for asset recovery?",
+    answer: "The timeline for successful asset recovery is contingent upon the complexity of the digital trail and the jurisdiction of the involved financial entities. Standard forensic operations typically conclude within 45 to 90 days."
   },
   {
-    question: "What are your fees?",
-    answer: "We operate primarily on a success-fee basis. This means we only get paid if we successfully recover your money. Our fees are a percentage of the recovered amount and will be clearly discussed and agreed upon before we begin."
+    question: "How are technical fees structured?",
+    answer: "Our operations are structured on a performance-based model. We prioritize recovery success, with technical fees calculated as a predefined percentage of the secured assets, ensuring alignment with client objectives."
   },
   {
-    question: "How long does the recovery process take?",
-    answer: "The duration varies greatly depending on the complexity of the case, the type of scam, and the cooperation of financial institutions. Some cases can be resolved in weeks, while others may take several months. We provide a realistic timeline after our initial assessment."
+    question: "Can encrypted digital assets be tracked?",
+    answer: "Yes. Our forensic teams utilize advanced blockchain analysis and proprietary nodes to track the movement of assets across distributed ledgers, even through sophisticated obfuscation layers."
   },
   {
-    question: "Is recovery guaranteed?",
-    answer: "Unfortunately, no one can guarantee a 100% recovery rate. The chances of success depend on many factors, such as how quickly the scam was reported and the methods used by the scammers. However, our expertise significantly increases the probability of a successful recovery."
+    question: "Is the recovery process legally recognized?",
+    answer: "All recovery protocols are conducted within the framework of international financial regulations and cyber-forensic standards, providing clients with comprehensive documentation for legal or insurance purposes."
   },
-    {
-    question: "What information do I need to provide?",
-    answer: "To start, we need as much detail as you can provide about the incident. This includes communication records, transaction details, websites or apps used, and any information you have about the scammer. The more information we have, the better our chances."
+  {
+    question: "What documentation is required to initiate intake?",
+    answer: "To initialize the forensic protocol, we require transaction IDs (TXIDs), communication logs, and any official reports filed with regulatory bodies. Comprehensive data accelerates the initial discovery phase."
   },
 ];
 
 export function Faq() {
   return (
-    <MotionDiv
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: true }}
-    >
-      <Accordion type="single" collapsible className="w-full">
+    <ScrollReveal direction="up">
+      <Accordion type="single" collapsible className="w-full space-y-4">
         {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index}`} className="border-b">
-            <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="border border-primary/5 rounded-xl px-6 bg-white shadow-premium hover:shadow-premium-hover transition-all duration-300"
+          >
+            <AccordionTrigger className="text-lg font-black font-headline text-left hover:no-underline py-6">
               {faq.question}
             </AccordionTrigger>
-            <AccordionContent className="text-base text-muted-foreground">
+            <AccordionContent className="text-base text-muted-foreground leading-relaxed pb-6">
               {faq.answer}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
-    </MotionDiv>
+    </ScrollReveal>
   );
 }

@@ -1,0 +1,20 @@
+{
+  "node": {
+    "4038f6901fafe823be0eda2b7f670677a039d150fb": {
+      "workers": {
+        "app/risk-assessment/page": {
+          "moduleId": "[project]/.next-internal/server/app/risk-assessment/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/lib/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "handleClaimSubmission",
+          "filename": "src/lib/actions.ts"
+        }
+      },
+      "layer": {
+        "app/risk-assessment/page": "action-browser"
+      },
+      "exportedName": "handleClaimSubmission",
+      "filename": "src/lib/actions.ts"
+    }
+  },
+  "edge": {}
+}

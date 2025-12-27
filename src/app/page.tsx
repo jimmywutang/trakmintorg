@@ -15,70 +15,21 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-background">
       <Header />
       <main className="flex-1">
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true }}
-        >
-          <Hero />
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <HowItWorks />
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <EducationalResources />
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <HomeFaq />
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-            <section className="py-20 md:py-28">
-                <div className="container">
-                    <Card className="shadow-2xl">
-                        <CardContent className="p-8 lg:p-12">
-                            <ClaimForm />
-                        </CardContent>
-                    </Card>
-                </div>
-            </section>
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <Testimonials />
-        </MotionDiv>
-        <MotionDiv
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <CtaSection />
-        </MotionDiv>
+        <Hero />
+        <HowItWorks />
+        <EducationalResources />
+        <HomeFaq />
+
+        <section className="py-24 md:py-32 bg-primary/5">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <ClaimForm />
+            </div>
+          </div>
+        </section>
+
+        <Testimonials />
+        <CtaSection />
       </main>
       <Footer />
     </div>

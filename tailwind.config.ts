@@ -1,4 +1,4 @@
-import type {Config} from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
 export default {
   darkMode: ['class'],
@@ -77,6 +77,13 @@ export default {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      boxShadow: {
+        'premium': '0 10px 30px -10px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.05)',
+        'premium-hover': '0 20px 40px -15px rgba(0, 0, 0, 0.15), 0 1px 8px rgba(0, 0, 0, 0.05)',
+      },
+      letterSpacing: {
+        tightest: '-0.05em',
       },
       keyframes: {
         'accordion-down': {

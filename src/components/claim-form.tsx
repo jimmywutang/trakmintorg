@@ -11,7 +11,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, CheckCircle } from 'lucide-react';
+import { Loader2, CheckCircle, ShieldCheck } from 'lucide-react';
 
 const claimFormSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
@@ -31,48 +31,45 @@ export function ClaimForm() {
   const form = useForm<ClaimFormValues>({
     resolver: zodResolver(claimFormSchema),
     defaultValues: {
-        fullName: "",
-        email: "",
-        phone: "",
-        amountLost: 0,
-        details: ""
+      fullName: "",
+      email: "",
+      phone: "",
+      amountLost: 0,
+      details: ""
     }
   });
 
   async function onSubmit(data: ClaimFormValues) {
     setIsLoading(true);
     try {
-      // Simulate a more realistic submission process by creating a new object
-      // with only the fields required by the action. This is good practice
-      // in case the form has more fields than the action expects.
       const submissionData = {
         ...data,
-        scamType: 'Not specified', // Default value
-        dateOfIncident: new Date().toISOString().split('T')[0], // Today's date
-        platform: 'Not specified', // Default value
+        scamType: 'Not specified',
+        dateOfIncident: new Date().toISOString().split('T')[0],
+        platform: 'Not specified',
       };
-      
+
       const result = await handleClaimSubmission(submissionData);
 
       if (result.success) {
         setIsSuccess(true);
         toast({
-          title: "Submission Successful",
-          description: result.message,
+          title: "Intake Complete",
+          description: "Your case has been successfully submitted to our forensic team.",
         });
       } else {
         toast({
           variant: "destructive",
-          title: "Submission Failed",
+          title: "Submission Error",
           description: result.message,
         });
       }
     } catch (error) {
-       toast({
-          variant: "destructive",
-          title: "An Error Occurred",
-          description: "Something went wrong. Please try again.",
-        });
+      toast({
+        variant: "destructive",
+        title: "System Error",
+        description: "A connectivity issue occurred. Please try again.",
+      });
     } finally {
       setIsLoading(false);
     }
@@ -81,70 +78,89 @@ export function ClaimForm() {
 
   if (isSuccess) {
     return (
-      <div className="text-center p-8">
-        <CheckCircle className="mx-auto h-16 w-16 text-green-500 mb-4" />
-        <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-        <p className="text-muted-foreground">
-            Your claim has been submitted successfully. Our team will review the details and contact you within 24-48 hours to discuss the next steps.
+      <div className="text-center p-12 bg-white rounded-3xl shadow-premium border border-primary/5">
+        <div className="mb-6 flex justify-center">
+          <div className="p-4 bg-green-50 rounded-full">
+            <CheckCircle className="h-16 w-16 text-green-500" />
+          </div>
+        </div>
+        <h2 className="text-3xl font-extrabold mb-4 text-primary font-headline">Submission Received</h2>
+        <p className="text-muted-foreground text-lg leading-relaxed">
+          Your claim is now in our secure intake queue. A senior recovery specialist will review your case and contact you within 24 business hours.
         </p>
       </div>
     )
   }
 
   return (
-    <div>
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-primary font-headline">Get a Free Case Review</h2>
-        <p className="text-muted-foreground">Fill out the form to get started.</p>
+    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-premium border border-primary/5 relative overflow-hidden">
+      <div className="absolute top-0 right-0 p-8 opacity-[0.03] pointer-events-none">
+        <ShieldCheck className="w-32 h-32 text-primary" />
       </div>
+
+      <div className="mb-10">
+        <h2 className="text-3xl font-extrabold text-primary font-headline mb-3">Case Initiation</h2>
+        <p className="text-muted-foreground text-lg italic">
+          Secure and confidential assessment of your situation.
+        </p>
+      </div>
+
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-             <FormField
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <FormField
               control={form.control}
               name="fullName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name *</FormLabel>
-                  <FormControl><Input placeholder="John Doe" {...field} /></FormControl>
+                  <FormLabel className="font-bold text-primary/70">Full Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="John Doe" className="py-6 rounded-xl border-primary/10 focus:border-accent focus:ring-accent" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-             <FormField
+            <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email Address *</FormLabel>
-                  <FormControl><Input type="email" placeholder="you@example.com" {...field} /></FormControl>
+                  <FormLabel className="font-bold text-primary/70">Corporate/Personal Email</FormLabel>
+                  <FormControl>
+                    <Input type="email" placeholder="you@example.com" className="py-6 rounded-xl border-primary/10 focus:border-accent focus:ring-accent" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
           </div>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormField
               control={form.control}
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number *</FormLabel>
-                  <FormControl><Input type="tel" placeholder="+1 (555) 123-4567" {...field} /></FormControl>
+                  <FormLabel className="font-bold text-primary/70">Primary Phone</FormLabel>
+                  <FormControl>
+                    <Input type="tel" placeholder="+1 (555) 000-0000" className="py-6 rounded-xl border-primary/10 focus:border-accent focus:ring-accent" {...field} />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
             <FormField
-                control={form.control}
-                name="amountLost"
-                render={({ field }) => (
-                    <FormItem>
-                    <FormLabel>Amount Lost (USD) *</FormLabel>
-                    <FormControl><Input type="number" placeholder="e.g., 5000" {...field} /></FormControl>
-                    <FormMessage />
-                    </FormItem>
-                )}
+              control={form.control}
+              name="amountLost"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="font-bold text-primary/70">Estimated Loss (USD)</FormLabel>
+                  <FormControl>
+                    <Input type="number" placeholder="50000" className="py-6 rounded-xl border-primary/10 focus:border-accent focus:ring-accent" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
           </div>
           <FormField
@@ -152,23 +168,39 @@ export function ClaimForm() {
             name="details"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>How were you scammed? *</FormLabel>
-                <FormControl><Textarea placeholder="Please provide a brief description of what happened." rows={3} {...field} /></FormControl>
+                <FormLabel className="font-bold text-primary/70">Brief Narrative of Loss</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Provide essential details regarding the timeline and nature of the incident."
+                    className="rounded-xl border-primary/10 focus:border-accent focus:ring-accent min-h-[120px]"
+                    {...field}
+                  />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          
-          <Button type="submit" disabled={isLoading} className="w-full text-lg py-6 font-bold" style={{backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))'}}>
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                Submitting...
-              </>
-            ) : (
-              'Start a claim'
-            )}
-          </Button>
+
+          <div className="pt-4">
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="w-full text-lg py-8 font-black uppercase tracking-widest rounded-xl shadow-premium hover:shadow-premium-hover transition-all duration-300"
+              style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}
+            >
+              {isLoading ? (
+                <>
+                  <Loader2 className="mr-3 h-6 w-6 animate-spin" />
+                  Processing Intake...
+                </>
+              ) : (
+                'Initiate Recovery Protocol'
+              )}
+            </Button>
+            <p className="text-[10px] text-center mt-6 text-muted-foreground uppercase font-bold tracking-tighter">
+              End-to-End Encryption Enabled • Verified Secure Connection
+            </p>
+          </div>
         </form>
       </Form>
     </div>
